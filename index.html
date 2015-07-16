@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Scale Commerce</title>
+    <style>
+        body {
+            background:#333;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color:white;
+            margin:0;
+            padding:0;
+            font-size:30px;
+            line-height:1.3em;
+        }
+        #page {
+            width:565px;
+            margin:20px auto 50px;
+        }
+        h1 {
+            font-size: 95px;
+            line-height:85px;
+            text-transform:uppercase;
+        }
+        span.sc1 {
+            font-size: 168px;
+        }
+        div.registerform {
+            font-size: 17px;
+        }
+        label {
+            display:inline-block;
+            width:120px;
+            height:30px;
+        }
+        ul label {
+            width:200px;
+        }
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+    </style>
+    <script src="js/countdown.min.js"></script>
+    <script type="application/javascript">
+        countdown.setLabels(' Millisekunde| Sekunde| Minute| Stunde| Tag| Woche| Monat| Jahr| Jahrzehnt| Jahrhundert| Jahrtausend',
+                ' Millisekunden| Sekunden| Minuten| Stunden| Tage| Wochen| Monate| Jahre| Jahrzehnte| Jahrhunderte| Jahrtausende',
+                ' und ',
+                ', ',
+                'jetzt');
+        window.onload=function(){
+            var target=document.getElementById('countdown');
+            (function setCountdown(){
+                var targetDate = new Date("2015-08-30T23:59:59");
+                var h = countdown(targetDate).toString();
+                target.textContent=h;
+                setTimeout(setCountdown,1000);
+            })();
+        }
+    </script>
+</head>
+<body>
+    <div id="page">
+        <h1><span class="sc1">Scale</span> Commerce</h1>
+        <p>Joscha Krug und Thomas Lohner vereinen ihre Erfahrungen der letzten Jahre in eine eine Best-Practice-Komplettlösung für Shops und Agenturen.</p>
+        <h2>Neugierig?</h2>
+        <p style="font-style:italic">Exklusive Prelaunch Infos und ein limited Edition-T-Shirt gibt's nur noch <span id="countdown">bis 30.08.2015 23:59:59</span>.</p>
+        <h2>Jetzt gleich anmelden</h2>
+        <div class="registerform">
+            <!-- Begin MailChimp Signup Form -->
+            <form action="//scale.us11.list-manage.com/subscribe/post?u=44304e98db66a0c46465d96d2&amp;id=5a48e3cfa9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">E-Mail Adresse: </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <span class="asterisk"> *</span>
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-COMPANY">Firma: </label>
+                        <input type="text" value="" name="COMPANY" class="" id="mce-COMPANY">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-FNAME">Vorname: </label>
+                        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-LNAME">Nachname: </label>
+                        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                    </div>
+                    <div class="mc-field-group input-group">
+                        <strong>Ich interessiere mich für: </strong>
+                        <ul><li><input type="checkbox" value="1" name="group[5197][1]" id="mce-group[5197]-5197-0"><label for="mce-group[5197]-5197-0">Lösung für Shops</label></li>
+                            <li><input type="checkbox" value="2" name="group[5197][2]" id="mce-group[5197]-5197-1"><label for="mce-group[5197]-5197-1">Lösung für Agenturen</label></li>
+                        </ul>
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_44304e98db66a0c46465d96d2_5a48e3cfa9" tabindex="-1" value=""></div>
+                    <div class="indicates-required"><span class="asterisk">*</span> Pflichtangabe</div>
+                    <div class="clear"><input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            <!--script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='COMPANY';ftypes[3]='text';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+        </div>
+    </div>
+</body>
+</html>
