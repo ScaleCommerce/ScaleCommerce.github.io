@@ -263,9 +263,10 @@ nav .caret{
 -------------------------------------------------------------- */
 
 .hero{
-	padding:150px 0;
+	padding:0;
 	position:relative;
 	display:inline-table;
+    background:#00394B;
 }
 .hero-nav{
 	position:absolute;
